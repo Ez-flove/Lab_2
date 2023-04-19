@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:iconifiedByDefault="false"
+        app:queryHint="nhập khoản chi tiêu..." />
+
+    <EditText
+        android:id="@+id/eForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="chọn từ ngày..."
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/eTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="chọn đến ngày..."
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Spinner
+            android:id="@+id/spCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button"
+            android:text="Search" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Tong:"
+        android:textColor="@color/yellow"
+        android:textSize="15dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+</LinearLayout>
